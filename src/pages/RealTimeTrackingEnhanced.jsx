@@ -19,7 +19,7 @@ const RealTimeTrackingEnhanced = () => {
     fetchDelivery();
     
     // Initialize Socket.IO
-    const newSocket = io("https://finallogisticsvishnubackend.onrender.com");
+    const newSocket = io(import.meta.env.VITE_API_URL || "http://localhost:5000");
     setSocket(newSocket);
 
     // Join tracking room
